@@ -17,3 +17,8 @@ jobs:
         run:
           echo "Mon exemple"
           echo "Env name ${{ github.event.inputs.Environement }}"
+      - name: Dump runner context
+        run: echo '${{ toJSON(runner) }}'
+      - name: Dump GitHub context
+        run: echo '${{ toJSON(github) }}'
+
